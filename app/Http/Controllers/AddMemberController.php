@@ -9,6 +9,8 @@ class AddMemberController extends Controller
     //
     function index(Request $req)
     {
-        return $req->input();
+        $data = $req->input('user');
+        $req->session()->flash('user', $data);
+        return redirect('addmember');
     }
 }
