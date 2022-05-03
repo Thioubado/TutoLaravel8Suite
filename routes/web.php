@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\AddMemberController;
 
+// appel de la classe ShowMemberController
+use App\Http\Controllers\ShowMemberController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +23,5 @@ Route::get('/', function () {
 //Flash Session
 Route::view('/addmember','addmember');
 Route::POST('/add',[AddMemberController::class,'index']);
+
+Route::get('/showMember', [ShowMemberController::class, 'show']);
