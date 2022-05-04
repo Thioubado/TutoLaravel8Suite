@@ -8,6 +8,9 @@ use App\Http\Controllers\ShowMemberController;
 // appel de la classe ShowMemberController2
 use App\Http\Controllers\ShowMemberController2;
 
+//appel de la classe pagination
+use App\Http\Controllers\PaginationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +33,6 @@ Route::POST('/add',[AddMemberController::class,'index']);
 Route::get('/showMember', [ShowMemberController::class, 'show']);
 
 Route::get('showMember2', [ShowMemberController2::class, 'exemple2']);
+
+//Route de la pagination
+Route::get('/pagination',[PaginationController::class, 'laPagination']);
