@@ -5,6 +5,9 @@ use App\Http\controllers\AddMemberController;
 
 // appel de la classe ShowMemberController
 use App\Http\Controllers\ShowMemberController;
+// appel de la classe ShowMemberController2
+use App\Http\Controllers\ShowMemberController2;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +28,5 @@ Route::view('/addmember','addmember');
 Route::POST('/add',[AddMemberController::class,'index']);
 
 Route::get('/showMember', [ShowMemberController::class, 'show']);
+
+Route::get('showMember2', [ShowMemberController2::class, 'exemple2']);
