@@ -11,6 +11,9 @@ use App\Http\Controllers\ShowMemberController2;
 //appel de la classe pagination
 use App\Http\Controllers\PaginationController;
 
+// appel de la classe AmisController
+use App\Http\Controllers\AmisController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +39,7 @@ Route::get('showMember2', [ShowMemberController2::class, 'exemple2']);
 
 //Route de la pagination
 Route::get('/pagination',[PaginationController::class, 'laPagination']);
+
+// route de la page amis
+Route::view('/amis','amis');
+Route::post('ajouter', [AmisController::class,'ajouterAmis']);
