@@ -15,6 +15,8 @@ use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\AmisController;
 //appel de la classe AmieController
 use App\Http\Controllers\AmieController;
+// appel de la classe enfantController
+use App\Http\Controllers\EnfantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +50,7 @@ Route::post('ajouter', [AmisController::class,'ajouterAmis']);
 // route pour la page amie
 Route::get('list', [AmieController::class, 'list']);
 Route::get('delete/{id}', [AmieController::class, 'delete']);
+
+// route pour la page enfants
+Route::get('enfants', [EnfantController::class, 'ShowEnfant']);
+Route::get('delete/{id}', [EnfantController::class, 'delete']);
