@@ -17,6 +17,8 @@ use App\Http\Controllers\AmisController;
 use App\Http\Controllers\AmieController;
 // appel de la classe enfantController
 use App\Http\Controllers\EnfantController;
+// appel de la classe GarconController
+use App\Http\Controllers\GarconController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,3 +56,7 @@ Route::get('delete/{id}', [AmieController::class, 'delete']);
 // route pour la page enfants
 Route::get('enfants', [EnfantController::class, 'ShowEnfant']);
 Route::get('delete/{id}', [EnfantController::class, 'delete']);
+
+// route pour la page garcons
+Route::get('garcons', [GarconController::class, 'afficher']);
+Route::get('delete/{id}', [GarconController::class, 'delete']);
