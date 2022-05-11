@@ -62,4 +62,4 @@ Route::get('garcons', [GarconController::class, 'afficher']);
 Route::get('delete/{id}', [GarconController::class, 'delete']);
 // appel de la page showData
 Route::get('edit/{id}', [GarconController::class, 'showData']);
-Route::post('/edit', [GarconController::class, 'update']);
+Route::post('edit', [GarconController::class, 'update']);
