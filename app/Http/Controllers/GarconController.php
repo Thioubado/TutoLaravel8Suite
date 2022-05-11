@@ -22,4 +22,23 @@ class GarconController extends Controller
         return redirect('garcons');
     }
 
+    function showData($id)
+    {
+        //return garcon::find($id);
+        $data = garcon::find($id);
+        return view('edit', ['data'=>$data]);
+    }
+
+    function update(Request $req)
+    {
+        //return $req->input();
+        $data = garcon::find($req->id);
+        $data->nom= $req->nom;
+        $data->prenom= $req->prenom;
+        $data->email= $req->email;
+        $data->address= $req->address;
+        $data->save();
+        return redirect('garcons');
+    }
+
 }

@@ -60,3 +60,6 @@ Route::get('delete/{id}', [EnfantController::class, 'delete']);
 // route pour la page garcons
 Route::get('garcons', [GarconController::class, 'afficher']);
 Route::get('delete/{id}', [GarconController::class, 'delete']);
+// appel de la page showData
+Route::get('edit/{id}', [GarconController::class, 'showData']);
+Route::post('/edit', [GarconController::class, 'update']);

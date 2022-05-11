@@ -18,7 +18,10 @@
         <td>{{$garcon['prenom']}}</td>
         <td>{{$garcon['email']}}</td>
         <td>{{$garcon['address']}}</td>
-        <td> <a href= {{"delete/".$garcon['id']}}>Delete</a></td>
+        <td>
+            <a href= {{"delete/".$garcon['id']}}>Delete</a>
+            <a href= {{"edit/".$garcon['id']}}>Edit</a>
+        </td>
     </tr>
     @endforeach
 </table>
