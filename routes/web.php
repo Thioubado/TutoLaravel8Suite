@@ -20,6 +20,9 @@ use App\Http\Controllers\EnfantController;
 // appel de la classe GarconController
 use App\Http\Controllers\GarconController;
 
+//appel de la classe JoueurController
+use App\Http\Controllers\JoueurController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,3 +66,14 @@ Route::get('delete/{id}', [GarconController::class, 'delete']);
 // appel de la page showData
 Route::get('edit/{id}', [GarconController::class, 'showData']);
 Route::post('edit', [GarconController::class, 'update']);
+
+// appel de la page joueur
+Route::view('ajoutJoueur', 'ajoutJoueur');
+Route::post('ajout',[JoueurController::class, 'ajouterJoueur']);
+//appel de la page listeJoueur
+Route::get('listeJoueur', [JoueurController::class, 'afficherListeJoueur']);
+//modification
+Route::get('modificationJoueur/{id}', [JoueurController::class, 'modifierJoueur']);
+Route::post('/modificationJoueur', [JoueurController::class, 'modifierJoueur']);
+// suppression
+Route::get('delete/{id}',[JoueurController::class, 'delete']);
