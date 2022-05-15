@@ -22,7 +22,7 @@ use App\Http\Controllers\GarconController;
 
 //appel de la classe JoueurController
 use App\Http\Controllers\JoueurController;
-
+use App\Http\Controllers\QueryBuilder;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -77,3 +77,6 @@ Route::get('modificationJoueur/{id}', [JoueurController::class, 'modifierJoueur'
 Route::post('/modificationJoueur', [JoueurController::class, 'modifierJoueur']);
 // suppression
 Route::get('delete/{id}',[JoueurController::class, 'delete']);
+
+// Route for Query Builder
+Route::get('queryBuilder',[QueryBuilder::class, 'ExampleWithQueryBuilder']);

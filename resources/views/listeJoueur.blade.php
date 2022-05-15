@@ -21,7 +21,7 @@
         <td>{{$joueur['numero']}}</td>
         <td>{{$joueur['nationalite']}}</td>
         <td><a href={{"modificationJoueur/".$joueur['id']}}>Modifier</a></td>
-        <td><a href="{{"delete/".$joueur['id']}}">supprimer</a></td>
+        <td><a href={{"delete/".$joueur['id']}}">supprimer</a></td>
         </tr>
     @endforeach
 </table>
