@@ -17,7 +17,7 @@ class QueryBuilder extends Controller
         // return view('queryBuilder', ['data'=>$data]);
 
         return DB::table('amis')
-        ->where('address', 'Senegal')
+        ->where('id', 3)
         ->get();
        
     }
