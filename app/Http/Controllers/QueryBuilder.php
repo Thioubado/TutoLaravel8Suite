@@ -12,8 +12,13 @@ class QueryBuilder extends Controller
     function ExampleWithQueryBuilder()
     {
         //return 'Query will be here';
-        //return DB::table('amis')->get();
-        $data = DB::table('members')->get();
-        return view('queryBuilder', ['data'=>$data]);
+
+         // $data = DB::table('members')->get();
+        // return view('queryBuilder', ['data'=>$data]);
+
+        return DB::table('amis')
+        ->where('address', 'Senegal')
+        ->get();
+       
     }
 }
