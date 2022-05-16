@@ -17,16 +17,7 @@ class QueryBuilder extends Controller
         // return view('queryBuilder', ['data'=>$data]);
 
         return DB::table('amis')
-        ->Where('id', 7)
-        ->update(
-            [
-                'nom' => 'Anil',
-                'prenom' => 'Sidhu',
-                'email' => 'anilsidhu@gmail.com',
-                'address' => 'Inde',
-                'numero' => '987656785'
-            ]
-        );
-       
+        ->Where('id', 7)->delete();
+              
     }
 }
