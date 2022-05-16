@@ -17,7 +17,7 @@ class QueryBuilder extends Controller
         // return view('queryBuilder', ['data'=>$data]);
 
         return DB::table('amis')
-        ->find(4);
+        ->count();
        
     }
 }
