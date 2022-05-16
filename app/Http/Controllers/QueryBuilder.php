@@ -17,7 +17,13 @@ class QueryBuilder extends Controller
         // return view('queryBuilder', ['data'=>$data]);
 
         return DB::table('amis')
-        ->count();
+        ->insert(
+            [
+                'nom' => 'Anil',
+                'prenom' => 'Sidhu',
+                'email' => 'anilsidhu@gmail.com'
+            ]
+        );
        
     }
 }
