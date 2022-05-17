@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+// si il y"a un message d'erreur, il faut faire php artisan migrate:fresh
+
 class CreateGroupesTable extends Migration
 {
     /**
