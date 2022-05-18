@@ -23,6 +23,9 @@ use App\Http\Controllers\GarconController;
 //appel de la classe JoueurController
 use App\Http\Controllers\JoueurController;
 use App\Http\Controllers\QueryBuilder;
+
+// appel de la classe AccessorsController
+use App\Http\Controllers\AccessorsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -80,3 +83,5 @@ Route::get('delete/{id}',[JoueurController::class, 'delete']);
 
 // Route for Query Builder
 Route::get('queryBuilder',[QueryBuilder::class, 'ExampleWithQueryBuilder']);
+// Route pour accessors
+Route::get('accessors', [AccessorsController::class, 'index']);
