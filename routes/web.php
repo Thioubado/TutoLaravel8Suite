@@ -26,6 +26,9 @@ use App\Http\Controllers\QueryBuilder;
 
 // appel de la classe AccessorsController
 use App\Http\Controllers\AccessorsController;
+
+// appel de la classe MutatorsController
+use App\Http\Controllers\MutatorsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -85,3 +88,6 @@ Route::get('delete/{id}',[JoueurController::class, 'delete']);
 Route::get('queryBuilder',[QueryBuilder::class, 'ExampleWithQueryBuilder']);
 // Route pour accessors
 Route::get('accessors', [AccessorsController::class, 'index']);
+
+//Route pour  mutators
+Route::get('mutators', [MutatorsController::class, 'index']);
