@@ -28,6 +28,7 @@ class CreateGroupesTable extends Migration
 			$table->id();
 			$table->string('nom');
 			$table->string('prenom');
+			$table->string('address');
 			$table->timestamps();
 		});
 	}
